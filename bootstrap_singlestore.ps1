@@ -31,8 +31,8 @@ singlestore < /tmp/post_config.sql
 "@ | Set-Content -Path "setupS2.sh"
 
 # Copy files to the pod
-kubectl -n $viya_namespace cp post_config.sql "$pod:/tmp"
-kubectl -n $viya_namespace cp setupS2.sh "$pod:/tmp"
+kubectl -n $viya_namespace cp post_config.sql "${pod}:/tmp"
+kubectl -n $viya_namespace cp setupS2.sh "${pod}:/tmp"
 
 # Execute the setup script inside the pod
 kubectl -n $viya_namespace exec $pod -- /bin/bash /tmp/setupS2.sh
