@@ -6,7 +6,7 @@
 # * Run from your home folder
 # Powershell kode
 # Set environment variables
-$env:KUBECONFIG = ".kube/engagekube"
+$env:KUBECONFIG = $HOME+"/.kube/engagekube"
 $viya_namespace = "viya"
 $pod = "node-sas-singlestore-cluster-master-0"
 
