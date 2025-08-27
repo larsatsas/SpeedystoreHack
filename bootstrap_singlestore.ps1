@@ -23,8 +23,10 @@ SET GLOBAL table_name_case_sensitivity = OFF;
 SET CLUSTER collation_server = 'utf8mb4_bin';
 CREATE USER IF NOT EXISTS 'sas' IDENTIFIED BY 'Orion123';
 CREATE DATABASE IF NOT EXISTS myDB;
+CREATE DATABASE IF NOT EXISTS S2Work;
 GRANT SHOW METADATA ON *.* to 'sas';
 GRANT ALL ON myDB.* TO 'sas';
+GRANT ALL ON S2Work.* TO 'sas';
 "@ | Set-Content -Path "post_config.sql" -NoNewline
 
 # Create setupS2.sh
@@ -40,4 +42,7 @@ kubectl -n $viya_namespace cp setupS2.sh "${pod}:/tmp"
 
 # Execute the setup script inside the pod
 kubectl -n $viya_namespace exec $pod -- /bin/bash /tmp/setupS2.sh
+
+# Find endpoints to Singlestore
+kubectl -n $viya_namespace get svc | findstr "single"
 
