@@ -1,0 +1,11 @@
+libname SPEEDY SSTORE
+		BULKLOAD=YES
+		DATABASE=myDB
+		PWD="{SAS001}T3Jpb24xMjM="
+		RESULTS=SERVER
+		SERVER="SVC-SAS-SINGLESTORE-CLUSTER-DDL"
+		USER=sas
+		SQL_FUNCTIONS=ALL
+		dbclient_max_bytes=1
+		dbmax_text=32767
+		dbsliceparm=all;
