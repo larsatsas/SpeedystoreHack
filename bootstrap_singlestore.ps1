@@ -4,8 +4,7 @@
 # * kubectl installed and available
 # * kubeconfig for your environment downloaded and stored at .kube/engagekube
 # * Run from your home folder
-#
-Powershell kode
+# Powershell kode
 # Set environment variables
 $env:KUBECONFIG = ".kube/engagekube"
 $viya_namespace = "viya"
