@@ -26,12 +26,14 @@ CREATE DATABASE IF NOT EXISTS S2Work;
 GRANT SHOW METADATA ON *.* to 'sas';
 GRANT ALL ON myDB.* TO 'sas';
 GRANT ALL ON S2Work.* TO 'sas';
+
 "@ | Set-Content -Path "post_config.sql" -NoNewline
 
 # Create setupS2.sh
 @"
 export MYSQL_PWD=$password
 singlestore < /tmp/post_config.sql
+
 "@ | Set-Content -Path "setupS2.sh" -NoNewline
 
 
