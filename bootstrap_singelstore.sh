@@ -2,6 +2,10 @@ export KUBECONFIG=.kube/engagekube
 export viya_namespace=viya
 export pod=node-sas-singlestore-cluster-master-0
 password=$(kubectl -n $viya_namespace get secret sas-singlestore-cluster -o yaml|grep "ROOT_PASSWORD"|awk '{print $2}'|base64 -d --wrap=0)
+export db_user='sas'
+export db_pass='Orion123'
+export db_name=myDB
+export epdb_name=S2Work
 # Setup Singlestore
 cat <<EOF > post_config.sql
 SET GLOBAL table_name_case_sensitivity = OFF;
