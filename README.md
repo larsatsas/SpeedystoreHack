@@ -27,7 +27,7 @@ Repo to hold instructions for use of Speedystore for SAS Hackathon
 
 To use Singlestore from Viya in this setup, there are a few things that needs to be configured in Singlestore; some configuration to ensure sorting is similar to SAS, setup users to access Singlestore, and databases to work with from SAS Viya. SAS Viya also need to define libname and caslib towards the database in Singlestore you want to work with.
 
-And dont worry - we have this sorted - there is a powershell script [here](bootstrap_singlestore.ps1) you can run from this repository for the Singlestore setup, and there are also github actions you can use from [this repository](https://github.com/sas-institute-cloudops/engage-dac-speedystore-actions/actions/workflows/api-post-deploy-config.yaml) if you prefer that.
+And dont worry - we have this sorted - there is a powershell script [here](bootstrap_singlestore.ps1) and shell script [here](bootstrap_singelstore.sh) to run in WSL you can run from this repository for the Singlestore setup, and there are also github actions you can use from [this repository](https://github.com/sas-institute-cloudops/engage-dac-speedystore-actions/actions/workflows/api-post-deploy-config.yaml) if you prefer that.
 
 After running this script, we have Singlestore ready for use with your SAS Viya engage environment.
 
