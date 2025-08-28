@@ -14,7 +14,7 @@ GRANT ALL ON ${db_name}.* TO '${db_user}';
 GRANT ALL ON ${epdb_name}.* TO '${db_user}';
 EOF
 # Start the setup
-cat <<EOF > ${workdir}/setupS2.sh
+cat <<EOF > setupS2.sh
 export MYSQL_PWD=$password
 singlestore < /tmp/post_config.sql
 EOF
