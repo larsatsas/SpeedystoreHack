@@ -35,8 +35,8 @@ In here you may want to add a libname to be able to access Singlestore from Comp
 
 Use these sas codes to be able to do that - from inside SAS Studio:
 
-* [Compute libname](lib_Singlestore.sas)
-* [Caslib](caslib_Singlestore.sas)
+* [Compute libname](sas_setup/lib_Singlestore.sas)
+* [Caslib](sas_setup/caslib_Singlestore.sas)
 
 ## Useful resources
 
