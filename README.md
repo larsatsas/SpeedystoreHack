@@ -1,5 +1,40 @@
 # SpeedystoreHack
-Repo to hold instructions for use of Speedystore for SAS Hackathon
+Repo to hold instructions for use of Speedystore for SAS Hackathon as well as some practical information about Singlestore.
+
+1. [Download kubeconfig](#download-kubeconfig-and-make-it-yours) and make it yours
+2. [Configure Singlestore to work well with SAS Viya](#configure-singlestore-to-work-with-sas-viya) - run one of these scripts; Powershell or Linux in WSL on your laptop
+3. [Run SAS Code]() to set up Compute Library and CASLib to Singlestore
+4. Find IP address of Singlestore endpoint
+5. Connect SQL Client to Singlestore (could be SAS Studio)
+
+
+## Download kubeconfig and make it yours
+First download the kubeconfig from your engage environment - see illustration below
+![Download kubeconfig](images/download_kubeconfig.jpg)
+
+Once it is downloaded - copy the downloaded kubeconfig file to your .kube folder under your home folder.
+
+In WSL - do: cp <downloaded file> $HOME/.kube/engagekube
+
+In Powershell - do: cp <downloaded file> $HOME\.kube\engagekube
+
+## Configure Singlestore to work with SAS VIya
+
+From your homefolder clone this repo: 
+git clone https://github.com/larsatsas/SpeedystoreHack.git
+
+Now that you have this available locally, you can run a script that does the configuration on the basis of those scripts.
+
+In WSL - run this from your home folder: 
+> sh SpeedystoreHack/bootstrap_singelstore.sh
+
+In Powershell - we need to copy and paste the ps1 file for now - feel free to work with the script to make this work automatically.
+Copy the content from [this repo](bootstrap_singlestore.ps1)
+And paste it from your home folder in Powershell. 
+
+
+## Run SAS Code to set up Compute library and Caslib
+
 
 
 ## Fast Analytical Queries, No More ETL Pipelines
