@@ -14,9 +14,9 @@ First download the kubeconfig from your engage environment - see illustration be
 
 Once it is downloaded - copy the downloaded kubeconfig file to your .kube folder under your home folder.
 
-In WSL - do: cp <downloaded file> $HOME/.kube/engagekube
+In WSL - do: cp --downloaded file-- $HOME/.kube/engagekube
 
-In Powershell - do: cp <downloaded file> $HOME\.kube\engagekube
+In Powershell - do: cp --downloaded file-- $HOME\.kube\engagekube
 
 ## Configure Singlestore to work with SAS VIya
 
