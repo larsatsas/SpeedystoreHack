@@ -7,8 +7,6 @@
 # Powershell kode
 # Set environment variables
 $env:KUBECONFIG = $HOME+"/.kube/engagekube"
-$viya_namespace = "viya"
-$pod = "node-sas-singlestore-cluster-master-0"
 # Find endpoints to Singlestore
-$s2ip = ($(kubectl -n $viya_namespace get svc | findstr "single" | findstr "LoadBalancer") -split  "\s+")[3]
+$s2ip = ($(kubectl -n viya get svc | findstr "single" | findstr "LoadBalancer") -split  "\s+")[3]
 echo $s2ip
